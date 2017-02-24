@@ -1,13 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+      <v-header :title="title" :menu-display="menuDisplay" :back-display="backDisplay" :map-display="mapDisplay"></v-header>
+      <div class="content" :class="{tabar: tabar}">
+        <transition name="slide-left">
+          <router-view></router-view>
+        </transition>  
+      </div>
+
+      <v-tabar></v-tabar>
+      <v-sidebar></v-sidebar>
   </div>
 </template>
 
 <script>
+import tabar from 'components/tabar'
+import header from 'components/header'
+import sidebar from 'components/sidebar'
+
 export default {
-  name: 'app'
+  name: 'app'，
+  components: {
+    'v-tabar': tabar,
+    'v-header': header,
+    'v-sidebar': sidebar,
+    'v-toast': toast,
+    'v-loading': loading,
+  },
 }
 </script>
 
