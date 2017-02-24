@@ -1,8 +1,6 @@
 
 import * as types from './mutation-types'
 
-import * as api from '../api'
-
 import router from '../router'
 
 import * as axios from '../http'

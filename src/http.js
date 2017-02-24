@@ -10,7 +10,7 @@ import * as _ from './config/whole'
 // axios 配置
 axios.defaults.timeout = 5000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-axios.defaults.baseURL = 'http://hjingren.cn:4000';
+axios.defaults.baseURL = 'http://localhost:4000'; //请求的api接口地址
 
 //POST传参序列化
 axios.interceptors.request.use((config) => {
