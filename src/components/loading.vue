@@ -21,8 +21,8 @@
     </div>
 </template>
 
-<style lang="scss">
-@import '../common/style/function';
+<style lang="scss" scoped>
+@import '../assets/css/function';
 
 .loading {
     position: fixed;
@@ -111,7 +111,7 @@
 	    bottom: 0;
 	    right: 0;
 	    z-index: 1001;
-	    background: rgba(0,0,0,.6);
+	    background: rgba(0,0,0,.7);
     }
 
 	@keyframes spin {

@@ -1,10 +1,10 @@
 <template>
 	<div class="sidebar">
 		<div class="sidebar-con" :class="{showbar: showbar}">
-	      	<div class="sidebar_head" v-if="isLogin">
+	      	<div class="sidebar_head" v-if="loginStatus">
 	        	<div class="user">
-	          		<img :src="userState.avatar" alt="">
-	          		<span>{{userState.username}}</span>
+	          		<img :src="userInfo.avatar" alt="">
+	          		<span>{{userInfo.username}}</span>
 	        	</div>
 	        	<div class="function">
 	          		<div class="function_sub">
@@ -70,46 +70,49 @@
 <script>
 import { mapGetters } from 'vuex'
 
+import * as _ from '../util/tool'
+
 export default {
 	data () {
 		return {
-			isLogin: false
+			
 		}
 	},
-	created () {
-		let userId = localStorage.userId
-		let phone = localStorage.phone
-		if (userId && phone) {
-			this.isLogin = true
-		} else {
-			this.isLogin = false
-		}
-	},
+	// created () {
+	// 	let userId = localStorage.userId
+	// 	let phone = localStorage.phone
+	// 	if (userId && phone) {
+	// 		this.isLogin = true
+	// 	} else {
+	// 		this.isLogin = false
+	// 	}
+	// },
 	computed: {
 		...mapGetters([
-			'userState'
+			'loginStatus',
+            'userInfo'
 		]),
 		showbar () {
-			return this.$store.state.showSidebar
+			return this.$store.state.com.leftNavStatus
 		}
 	},
 	methods: {
 		hidebar () {
-			this.$store.dispatch('showSidebar', false)
+			this.$store.dispatch('setNavState', false)
 		},
 		logout () {
-			this.$store.state.user = {}
-			localStorage.removeItem('userId')
-			localStorage.removeItem('phone')
-			alert('退出登录成功')
-			this.$router.replace('/user');
+			this.$store.dispatch('setSignOut')
+			_.alert('退出登录成功')
+			setTimeout(() => {
+				this.$router.replace('/user')
+			}, 500)
 		}
 	}
 }
 </script>
 
 <style scoped lang="scss">
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .sidebar {
 	.sidebar-con {

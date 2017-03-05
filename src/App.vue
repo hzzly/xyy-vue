@@ -1,53 +1,71 @@
 <template>
-  <div id="app">
-      <!--<transition name="fade">-->
+    <div id="app">
         <v-toast v-show="showToast"></v-toast>
-      <!--</transition>-->
-      <v-loading v-show="showLoading"></v-loading>
-      <v-header :title="title" :menu-display="menuDisplay" :back-display="backDisplay" :map-display="mapDisplay"></v-header>
-      <div class="content" :class="{tabar: tabar}">
-        <transition name="slide-left">
-          <router-view></router-view>
-        </transition>  
-      </div>
+        <v-alert v-show="showAlert"></v-alert>
+        <v-loading v-show="loading"></v-loading>
 
-      <v-tabar></v-tabar>
-      <v-sidebar></v-sidebar>
+        <v-header :title="title" :menu-display="menuDisplay" :back-display="backDisplay" :map-display="mapDisplay"></v-header>
+        <div class="content" :class="{tabar: tabar}">
+            <transition name="slide-left">
+                <router-view></router-view>
+            </transition>  
+        </div>
+        <v-tabar></v-tabar>
+        <v-sidebar></v-sidebar>
   </div>
 </template>
 
 <script>
-import tabar from 'components/tabar'
-import header from 'components/header'
-import sidebar from 'components/sidebar'
-import toast from 'components/toast'
-import loading from 'components/loading'
+import tabar from '@/components/tabar'
+import header from '@/components/header'
+import sidebar from '@/components/sidebar'
+import toast from '@/components/toast'
+import alert from '@/components/alert'
+import loading from '@/components/loading'
+
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'app',
   components: {
-    'v-tabar': tabar,
+		'v-tabar': tabar,
     'v-header': header,
     'v-sidebar': sidebar,
-    'v-toast': toast,
-    'v-loading': loading,
-  },
+		'v-toast': toast,
+		'v-alert': alert,
+		'v-loading': loading,
+	},
   data () {
     return {
       
     }
   },
-  mounted () {
-    
+  watch: {
+      // 如果路由有变化，会再次执行该方法
+      '$route': 'hideMenuSlide'
+  },
+  methods: {
+      ...mapActions({ setNavState: 'setNavState' }),
+      // 隐藏MenuSlide
+      hideMenuSlide() {
+        this.setNavState(false)
+      }
   },
   computed: {
+      ...mapGetters([
+          'loading',
+          'showToast',
+          'showAlert'
+      ]),
       title () {
         switch (this.$route.path.split('/')[1]) {
+            case '':
+              return "Qu约"
             case 'home':
               return "Qu约"
-            case 'sports':
+            case 'sport':
               return "约跑"
-            case 'travels':
+            case 'travel':
               return "约行"
             case 'user':
               return "我的"
@@ -70,19 +88,13 @@ export default {
           return true
         }
         return false
-      },
-      showToast () {
-        return this.$store.state.showToast
-      },
-      showLoading () {
-        return this.$store.state.showLoading
       }
   }
 }
 </script>
 
 <style lang="scss">
-@import './common/style/index';
+@import './assets/css/function';
 
 @font-face {
   font-family: 'icon';  /* project id 172436 */

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import panel from 'components/panel'
+import panel from '@/components/panel'
 
 export default {
     props: {
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .travel-list {
     margin-top: px2rem(15px);

@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .cell {
     background: #fff;

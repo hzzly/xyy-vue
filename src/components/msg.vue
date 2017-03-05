@@ -3,31 +3,17 @@
         <router-link to="" class="unread">
             <div class="content-w">
                 <div class="title">
-                    <h2><nobr>dvfgs</nobr></h2>
+                    <h2><nobr>消息标题</nobr></h2>
                 </div>
                 <div class="divider"></div>
                 <div class="message-text">
-                    <p>erfregegv</p>
+                    <p>消息主体消息主体消息主体消息主体消息主体消息主体消息主体</p>
                 </div>
                 <div class="time">
-                    <span>2017-2-20</span>
+                    <span>2017-2-20 9:59:59</span>
                 </div>
             </div>
         </router-link>
-        <!--<a class="dj-panel" v-for="messageList in messageLists"> 
-            <div class="content">
-                <div class="title">
-                    <h2><nobr>{{messageList.message}}</nobr></h2>
-                </div>
-                <div class="divider"></div>
-                <div class="message-text">
-                    <p>{{messageList.message}}</p>
-                </div>
-                <div class="time">
-                    <span>{{messageList.createDate}}</span>
-                </div>
-            </div>
-        </a> -->
     </div>
 </template>
 
@@ -50,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .msg {
     a {
@@ -67,7 +53,7 @@ export default {
                     width: px2rem(650px);
                     height: px2rem(100px);
                     color: #000;
-                    font-size: px2rem(36px);
+                    font-size: 16px;
                     padding: 0 px2rem(10px);
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -80,11 +66,12 @@ export default {
             .message-text{
                 padding-top: px2rem(25px);
                 padding-left: px2rem(10px);
-                font-size: px2rem(28px);
+                font-size: 14px;
                 color: #999;
                 p{
                     width: px2rem(660px);
                     height: px2rem(90px);
+                    line-height: px2rem(40px);
                     display: -webkit-box;
                     overflow: hidden;
                     text-overflow: ellipsis;

@@ -28,14 +28,14 @@
         alert('开发中')
       },
       showBar () {
-        this.$store.dispatch('showSidebar', true)
+        this.$store.dispatch('setNavState', true)
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .header{
   position: fixed;

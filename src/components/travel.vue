@@ -1,6 +1,6 @@
 <template>
 	<div class="travel">
-        <router-link :to="{ path: 'travels/'+ travel.objectId }">
+        <router-link :to="{ path: '/travel/'+ travel.objectId }">
             <div class="A-cimg">
                 <img :src="travel.travelPic" alt="">
                 <span class="i-activity p-free">免费</span>
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .travel {
     padding: px2rem(10px);
@@ -106,7 +106,7 @@ export default {
     }
 }
 
-// .eventreminder a span.event-sp {
+/*// .eventreminder a span.event-sp {
 // 	width:2.5rem;
 //     height: px2rem(100px);
 // 	background:#0C0;
@@ -135,5 +135,5 @@ export default {
 // .eventreminder .eventreminder-list p.activity-TimeXh{ font-size: .65rem; color: #929292;}
 // .eventreminder .eventreminder-list em {
 // 	color:#00F;
-// }
+// }*/
 </style>

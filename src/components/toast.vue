@@ -14,28 +14,23 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
     data () {
         return {
 
         }
     },
-    computed: {
-        success () {
-            return this.$store.state.showSuccess
-        },
-        fail () {
-            return this.$store.state.showFail
-        },
-        toastMsg () {
-            return this.$store.state.toastMsg
-        }
-    }
+    computed: mapState({
+        success: state => state.com.showSuccess,
+        fail: state => state.com.showFail,
+        toastMsg: state => state.com.toastMsg
+    })
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .toast {
     z-index: 100;

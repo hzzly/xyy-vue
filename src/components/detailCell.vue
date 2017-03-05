@@ -13,11 +13,10 @@
 
 <script>
 export default {
-    // props: [beginTime,endTime,cantJoinTime,destination,releaseUsername],
     props: {
-        beginTime: Object,
-        endTime: Object,
-        cantJoinTime: Object,
+        beginTime: String,
+        endTime: String,
+        cantJoinTime: String,
         destination: String,
         releaseUsername: String,
     },
@@ -32,13 +31,17 @@ export default {
     filters: {
         formatTime (value) {
             
+            // let time = Date(value)
+            // // return new Date(time).toLocaleString()
+            // return new Date(time)
+            // // console.log(time)
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .cell {
     background: #fff;

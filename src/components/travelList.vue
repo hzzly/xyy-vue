@@ -6,7 +6,7 @@
                 <span>热门活动</span>
             </div>
             <div class="head-r">
-                <router-link to="/travels">
+                <router-link to="/travel">
                     <i class="icon fr">&#xe7a7;</i>
                 </router-link>
             </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import travel from 'components/travel'
+import travel from '@/components/travel'
 
 export default {
     props: {
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .travel-list {
     margin-top: px2rem(15px);

@@ -8,13 +8,13 @@
 				</router-link>
 			</div>
 			<div class="tab-item">
-				<router-link to="/sports">
+				<router-link to="/sport">
 					<div class="tab-icon"><img src="../assets/images/tab_running.png" alt=""></div>
 					<div class="tab-text">约跑</div>
 				</router-link>
 			</div>
 			<div class="tab-item">
-				<router-link to="/travels">
+				<router-link to="/travel">
 					<div class="tab-icon"><img src="../assets/images/tab_travel.png" alt=""></div>
 					<div class="tab-text">约行</div>
 				</router-link>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .tabar{
 	.tab{

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import msg from 'components/msg'
+import msg from '@/components/msg'
 
 export default {
     components: {
@@ -26,10 +26,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped lang="scss">
-@import '../common/style/function';
-
-
-
-</style>

@@ -5,25 +5,25 @@
 		</div>
         <ul>
 			<li>
-				<router-link to="user/register">
+				<router-link to="/user/regist">
 					<i class="icon">&#xe733;</i>
 					<span>新用户</span>
 				</router-link>
 			</li>
 			<li>
-				<router-link to="">
+				<router-link to="/user/navbar">
 					<i class="icon">&#xe666;</i>
 					<span>我的约跑</span>
 				</router-link>
 			</li>
 			<li>
-				<router-link to="">
+				<router-link to="/user/navbar">
 					<i class="icon">&#xe6bd;</i>
 					<span>我的约行</span>
 				</router-link>
 			</li>
 			<li>
-				<router-link to="user/eadit">
+				<router-link to="/user/post">
 					<i class="icon">&#xe63c;</i>
 					<span>去发布</span>
 				</router-link>
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .y-nav {
     background: #fff;

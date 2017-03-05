@@ -1,6 +1,6 @@
 <template>
     <div class="panel">
-        <router-link :to="{ path: 'sports/'+ sport.objectId }">
+        <router-link :to="{ path: '/sport/'+ sport.objectId }">
             <h4 class="title">{{sport.title}}</h4>
             <p class="desc">{{sport.content}}</p>
             <ul>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .panel {
     margin: px2rem(20px) 0 0;

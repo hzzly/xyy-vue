@@ -1,81 +1,92 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-/*4个主要页面结构*/
-import home from 'pages/home/home'
-import sports from 'pages/sports/sports'
-import travels from 'pages/travels/travels'
-import user from 'pages/user/user'
-
-import set from 'pages/user/set'
-import login from 'pages/user/login'
-import register from 'pages/user/register'
-import userInfo from 'pages/user/userInfo'
-import travelDetail from 'components/travelDetail'
-import sportDetail from 'components/sportDetail'
-import addActivity from 'components/addActivity'
-import userMsg from 'components/userMsg'
+import Home from '../pages/Home'
+import Sport from '../pages/Sport'
+import Travel from '../pages/Travel'
+import Detail from '../pages/Detail'
+import User from '../pages/User'
+import Login from '../pages/Login'
+import Regist from '../pages/Regist'
+import UserInfo from '../pages/UserInfo'
+import Set from '../pages/Set'
+import Post from '../pages/Post'
+import UserMsg from '../pages/UserMsg'
+import Navbar from '../pages/Navbar'
+import NotFound from '../pages/NotFound'
 
 Vue.use(Router)
 
-const router = new Router({
-	linkActiveClass: 'active',
-	routes: [
-		{
-			path: '/home',
-			name: 'home',
-			component: home
-		},
-		{
-			path: '/sports',
-			name: 'sports',
-			component: sports
-		},
-		{
-			path: '/travels',
-			name: 'travels',
-			component: travels
-		},
-		{
-			path: '/user',
-			name: 'user',
-			component: user
-		},
-		{
+export default new Router({
+  linkActiveClass: 'active',
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/sport',
+      name: 'sport',
+      component: Sport
+    },
+    {
+      path: '/travel',
+      name: 'travel',
+      component: Travel
+    },
+    {
+      path: '/sport/:id',
+      name: 'detail',
+      component: Detail
+    },
+    {
+      path: '/travel/:id',
+      name: 'detail',
+      component: Detail
+    },
+    {
+      path: '/user',
+      name: 'user',
+      component: User
+    },
+    {
 			path: '/user/login',
-			component: login
+			component: Login
 		},
 		{
-			path: '/user/register',
-			component: register
+			path: '/user/regist',
+			component: Regist
 		},
 		{
 			path: '/user/info',
-			component: userInfo
+			component: UserInfo
 		},
 		{
 			path: '/user/set',
-			component: set
+			component: Set
 		},
 		{
-			path: '/user/eadit',
-			component: addActivity
+			path: '/user/post',
+			component: Post
 		},
 		{
 			path: '/user/msg',
-			component: userMsg
+			component: UserMsg
 		},
-		{
-			path: '/travels/:id',
-			component: travelDetail
+    {
+			path: '/user/navbar',
+			component: Navbar
 		},
-		{
-			path: '/sports/:id',
-			component: sportDetail
-		}
-	]
+    {
+      path: '*',
+      name: 'notfound',
+      component: NotFound
+    }
+  ]
 })
-
-router.push('/home')
-
-export default router

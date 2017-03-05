@@ -7,13 +7,14 @@
             :desc="item.desc" 
             :badg="item.badg"
             :more="item.more"
-            :avatar="item.avatar">
+            :avatar="item.avatar"
+            :key="index">
         </cell>
     </div>
 </template>
 
 <script>
-import cell from 'components/userCell'
+import cell from '@/components/userCell'
 
 export default {
     props: {
@@ -34,17 +35,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../common/style/function';
+@import '../assets/css/function';
 
 .group {
     margin-bottom: px2rem(20px);
-    // .cell {
-    //     &:last-child {
-    //         a{
-    //             border-bottom: none;
-    //         }         
-    //     }
-    // }
 }
 
 </style>
