@@ -1,0 +1,63 @@
+//获取用户自己发布的约行
+{
+  "data": [
+    {
+      "joinMax": "10",
+      "clicks": 2393,
+      "content": "",
+      "travelPic": "http://ac-afkydcqq.clouddn.com/f7a0443a710ceded28ef.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2017-03-28T05:41:00.000Z"
+      },
+      "joinNum": 0,
+      "joinUser": [
+        "58d88609a22b9d00646ada5f"
+      ],
+      "title": "庐山游",
+      "releaseUsername": "哈哈",
+      "releaseUserId": "5836c4ea67f3560065f52b5d",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2017-03-16T05:41:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2017-02-28T05:41:00.000Z"
+      },
+      "releaseTime": "2017-02-28 13:37:50",
+      "destination": "江西 九江 庐山区 江西省九江市",
+      "objectId": "58b50cae570c350058aaeb25",
+      "createdAt": "2017-02-28T05:37:50.528Z",
+      "updatedAt": "2017-05-08T13:05:22.004Z"
+    },
+    {
+      "joinMax": "5",
+      "clicks": 927,
+      "content": "dfrgrvf",
+      "travelPic": "http://ac-afkydcqq.clouddn.com/f7a0443a710ceded28ef.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2017-03-23T03:10:00.000Z"
+      },
+      "joinNum": 0,
+      "title": "hhhhhhh",
+      "releaseUsername": "哈哈",
+      "releaseUserId": "5836c4ea67f3560065f52b5d",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2017-02-28T03:10:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2017-02-28T03:10:00.000Z"
+      },
+      "releaseTime": "2017-02-28 11:10:56",
+      "destination": "江西 南昌 东湖区 efrgvv",
+      "objectId": "58b4ea408fd9c50064bf9fa2",
+      "createdAt": "2017-02-28T03:10:56.516Z",
+      "updatedAt": "2017-04-30T11:45:28.946Z"
+    }
+  ],
+  "success": true
+}

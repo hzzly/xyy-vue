@@ -132,9 +132,21 @@ a.active {
   .tabar {
     margin-bottom: px2rem(120px);
   }
-  .slide-left-enter-active {
-    animation: slideLeft .3s;
+  //渐变动效
+  .slide-left-enter-active,
+  .slide-left-leave-active {
+    transition: all .1s ease-in;
+    opacity: 1;
   }
+  .slide-left-enter,
+  .slide-left-leave-active {
+    opacity: 0;
+  }
+
+  //左滑动效
+  // .slide-left-enter-active {
+  //   animation: slideLeft .3s;
+  // }
 }
 
 @keyframes slideLeft {

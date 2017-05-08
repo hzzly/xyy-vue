@@ -1,0 +1,17 @@
+//用户详情
+{
+  "data": {
+    "universities": "东理",
+    "sex": "男",
+    "nickname": "哈哈",
+    "username": "18679168426",
+    "emailVerified": false,
+    "mobilePhoneNumber": "18679168426",
+    "avatar": "http://ac-aFkydcqQ.clouddn.com/a96b23926358c9999112.jpg",
+    "mobilePhoneVerified": true,
+    "objectId": "5836c4ea67f3560065f52b5d",
+    "createdAt": "2016-11-24T10:46:02.407Z",
+    "updatedAt": "2017-02-21T14:54:27.169Z"
+  },
+  "success": true
+}

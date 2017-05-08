@@ -1,0 +1,22 @@
+//约跑步第一个活动详情
+{
+  "data": {
+    "joinMax": "5",
+    "content": "快来参加吧。。。",
+    "endTime": "11/16/2016, 4:47:00 PM",
+    "joinUser": [
+      "58d88609a22b9d00646ada5f"
+    ],
+    "title": "夜跑队",
+    "releaseUsername": "hzzly",
+    "releaseUserId": "57a1f1150a2b58005828c312",
+    "cantJoinTime": "11/16/2016, 4:47:00 PM",
+    "beginTime": "11/16/2016, 4:47:00 PM",
+    "releaseTime": "2016-11-16 16:51:08",
+    "destination": "江西 南昌 新建县 东华理工大学",
+    "objectId": "582c1dfd2e958a0069b30768",
+    "createdAt": "2016-11-16T08:51:09.087Z",
+    "updatedAt": "2017-03-27T03:27:12.438Z"
+  },
+  "success": true
+}
