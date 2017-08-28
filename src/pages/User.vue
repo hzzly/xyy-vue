@@ -9,7 +9,7 @@
 					<router-link to="/user/login" class="t-login">登录</router-link>
 					<router-link to="/user/regist" class="t-regist">注册</router-link>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<div v-else>
 			<div class="user-h islogin">
@@ -37,7 +37,7 @@
 				<div class="circle-more">
 					<img src="../assets/images/more.png" alt="">
 				</div>
-			</div>	
+			</div>
 		</div>
 		<div class="user-h-list">
 			<ul>
@@ -61,7 +61,7 @@
 				</li>
 			</ul>
 		</div>
-		
+
 		<group :cell-lists="cellLists1"></group>
 		<group :cell-lists="cellLists2"></group>
 		<group :cell-lists="cellLists3"></group>
@@ -82,24 +82,24 @@ export default {
 	data() {
 		return {
 			cellLists1: [
-                { link: '', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-cert.png', text: '学生认证', desc: '', badg: '', more: true},
-                { link: 'user/info', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-detail.png', text: '我的详情', desc: '', badg: '', more: true},     
-                { link: 'user/msg', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-message.png', text: '消息通知', desc: '', badg: '4', more: true},     
-            ],
-            cellLists2: [
-                { link: '', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-addfriend.png', text: '邀请好友', desc: '', badg: '', more: true},
-                { link: '', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-school.png', text: '选择高校', desc: '', badg: '', more: true}               
-            ],
+				{ link: '', iconUrl: 'http://hzzly.net/xyy-vue/images/user-cert.png', text: '学生认证', desc: '', badg: '', more: true },
+				{ link: 'user/info', iconUrl: 'http://hzzly.net/xyy-vue/images/user-detail.png', text: '我的详情', desc: '', badg: '', more: true },
+				{ link: 'user/msg', iconUrl: 'http://hzzly.net/xyy-vue/images/user-message.png', text: '消息通知', desc: '', badg: '4', more: true },
+			],
+			cellLists2: [
+				{ link: '', iconUrl: 'http://hzzly.net/xyy-vue/images/user-addfriend.png', text: '邀请好友', desc: '', badg: '', more: true },
+				{ link: '', iconUrl: 'http://hzzly.net/xyy-vue/images/user-school.png', text: '选择高校', desc: '', badg: '', more: true }
+			],
 			cellLists3: [
-                { link: 'user/set', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-set.png', text: '设置', desc: '', badg: '', more: true},
-                { link: '', iconUrl: 'http://hjingren.cn/xyy-vue/images/user-call.png', text: '联系客服', desc: '18679168426', badg: '', more: true}               
-            ],
+				{ link: 'user/set', iconUrl: 'http://hzzly.net/xyy-vue/images/user-set.png', text: '设置', desc: '', badg: '', more: true },
+				{ link: '', iconUrl: 'http://hzzly.net/xyy-vue/images/user-call.png', text: '联系客服', desc: '18679168426', badg: '', more: true }
+			],
 			pubTotravelNum: 0,
 			pubTosportNum: 0
 		}
 	},
-	created () {
-		if(this.loginStatus) {
+	created() {
+		if (this.loginStatus) {
 			api.getPubTotravelNum(this.userInfo.objectId)
 				.then(res => {
 					this.pubTotravelNum = res.data
@@ -109,7 +109,7 @@ export default {
 	computed: {
 		...mapGetters([
 			'loginStatus',
-            'userInfo'
+			'userInfo'
 		])
 	}
 }
@@ -145,14 +145,14 @@ export default {
 		box-sizing: border-box;
 		height: px2rem(310px);
 		color: #323232;
-    	background: #76D49B;
+		background: #76D49B;
 		text-align: center;
 		padding-top: px2rem(20px);
 		.avatar {
 			width: px2rem(160px);
 			height: px2rem(160px);
 			border-radius: 50%;
-			border: 2px solid rgba(255, 255, 255, 0.95);		
+			border: 2px solid rgba(255, 255, 255, 0.95);
 			box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 			overflow: hidden;
 			img {
