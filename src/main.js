@@ -4,15 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import store from './vuex/store'
-import * as filters from './util/filter'
-
-Object.keys(filters).forEach(k => Vue.filter(k, filters[k])) //注册过滤器
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  store,
-  ...App
+  template: '<App/>',
+  components: { App }
 })
