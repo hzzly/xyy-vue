@@ -48,7 +48,7 @@ export default new Router({
     },
     {
       path: '/travel/:id',
-      name: 'sport-detail',
+      name: 'travel-detail',
       component: Detail
     },
     {
