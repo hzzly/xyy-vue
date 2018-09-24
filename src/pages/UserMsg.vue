@@ -5,18 +5,14 @@
 </template>
 
 <script>
-
-import msgList from '@/components/msgList'
+import msgList from "@/components/msgList";
 
 export default {
-
-	components: {
-		msgList
-	},
-	data() {
-		return {
-			
-		}
-	},
-}
+  components: {
+    msgList
+  },
+  data() {
+    return {};
+  }
+};
 </script>

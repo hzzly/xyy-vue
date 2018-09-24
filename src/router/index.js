@@ -22,8 +22,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      redirect: '/home'
     },
     {
       path: '/home',
@@ -42,12 +41,12 @@ export default new Router({
     },
     {
       path: '/sport/:id',
-      name: 'detail',
+      name: 'sport-detail',
       component: Detail
     },
     {
       path: '/travel/:id',
-      name: 'detail',
+      name: 'travel-detail',
       component: Detail
     },
     {
@@ -56,33 +55,33 @@ export default new Router({
       component: User
     },
     {
-			path: '/user/login',
-			component: Login
-		},
-		{
-			path: '/user/regist',
-			component: Regist
-		},
-		{
-			path: '/user/info',
-			component: UserInfo
-		},
-		{
-			path: '/user/set',
-			component: Set
-		},
-		{
-			path: '/user/post',
-			component: Post
-		},
-		{
-			path: '/user/msg',
-			component: UserMsg
-		},
+      path: '/user/login',
+      component: Login
+    },
     {
-			path: '/user/navbar',
-			component: Navbar
-		},
+      path: '/user/regist',
+      component: Regist
+    },
+    {
+      path: '/user/info',
+      component: UserInfo
+    },
+    {
+      path: '/user/set',
+      component: Set
+    },
+    {
+      path: '/user/post',
+      component: Post
+    },
+    {
+      path: '/user/msg',
+      component: UserMsg
+    },
+    {
+      path: '/user/navbar',
+      component: Navbar
+    },
     {
       path: '*',
       name: 'notfound',

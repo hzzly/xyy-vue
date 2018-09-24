@@ -1,9 +1,9 @@
 <template>
 	<div class="y-nav">
-        <div class="y_nav_h">
+    <div class="y_nav_h">
 			<img src="../assets/images/homepage_man.png" alt="">年轻哪能不放纵，约起来
 		</div>
-        <ul>
+    <ul>
 			<li>
 				<router-link to="/user/regist">
 					<i class="icon">&#xe733;</i>
@@ -34,57 +34,54 @@
 
 <script>
 export default {
-	data() {
-		return {
-			
-		}
-	}
-}
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style scoped lang="scss">
-@import '../assets/css/function';
+@import "../assets/css/function";
 
 .y-nav {
-    background: #fff;
-    padding-bottom: px2rem(20px);
-	.y_nav_h {
-		width: px2rem(380px);
-		margin: 0 auto;
-		text-align: center;
-		padding-top: 5px;
-		position: relative;
-		padding-bottom: 3px;
-		border-bottom: 1px solid #000;
-		img {
-			width: px2rem(60px);
-			height: px2rem(55px);
-			margin-left: -5px;
-			vertical-align: middle;
-		}
-	}
-	ul {
-		display: flex;
-        margin-top: px2rem(15px);
-		li {
-			width: 25%;
-			text-align: center;
-			.icon {
-				display: block;
-				width: px2rem(110px);
-				height: px2rem(110px);
-				line-height: px2rem(110px);
-				background: #2ad2c9;
-				font-size: 22px;
-				margin: 0 auto;
-				border-radius: 45%;
-                margin-bottom: px2rem(15px);
-			}
-            span {
-                font-size: 13px;
-            }
-		}
-	}
+  background: #fff;
+  padding-bottom: px2rem(20px);
+  .y_nav_h {
+    width: px2rem(380px);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    position: relative;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #000;
+    img {
+      width: px2rem(60px);
+      height: px2rem(55px);
+      margin-left: -5px;
+      vertical-align: middle;
+    }
+  }
+  ul {
+    display: flex;
+    margin-top: px2rem(15px);
+    li {
+      width: 25%;
+      text-align: center;
+      .icon {
+        display: block;
+        width: px2rem(110px);
+        height: px2rem(110px);
+        line-height: px2rem(110px);
+        background: #2ad2c9;
+        font-size: 22px;
+        margin: 0 auto;
+        border-radius: 45%;
+        margin-bottom: px2rem(15px);
+      }
+      span {
+        font-size: 13px;
+      }
+    }
+  }
 }
-
 </style>
