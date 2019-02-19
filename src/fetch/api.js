@@ -4,9 +4,9 @@ import qs from 'qs'
 import * as _ from '../util/tool'
 
 // axios 配置
-axios.defaults.timeout = 5000;
+axios.defaults.timeout = 10000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-axios.defaults.baseURL = 'http://localhost:4000/';
+axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5c6b6b1815b74a0aacc7a902/xyy';
 
 //POST传参序列化
 axios.interceptors.request.use((config) => {
@@ -31,7 +31,7 @@ axios.interceptors.response.use((res) => {
 	return Promise.reject(error);
 });
 
-export function fetch(url, params) {
+export function fetchPost(url, params) {
 	return new Promise((resolve, reject) => {
 		axios.post(url, params)
 			.then(response => {
@@ -45,82 +45,98 @@ export function fetch(url, params) {
 	})
 }
 
+export function fetchGet(url, param) {
+  return new Promise((resolve, reject) => {
+    axios.get(url, {
+        params: param
+      })
+      .then(response => {
+        resolve(response.data)
+      }, err => {
+        reject(err)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
+}
+
 export default {
 	/**
 	 * 用户登录
 	 */
 	Login(params) {
-		return fetch('/users/api/userLogin', params)
+		return fetchPost('/users/api/userLogin', params)
 	},
 
 	/**
 	 * 用户注册
 	 */
 	Regist(params) {
-		return fetch('/users/api/userRegist', params)
+		return fetchPost('/users/api/userRegist', params)
 	},
 
 	/**
 	 * 发送注册验证码
 	 */
 	RegistVerifiCode(tellphone) {
-		return fetch('/users/api/registVerifiCode', { tellphone: tellphone })
+		return fetchPost('/users/api/registVerifiCode', { tellphone: tellphone })
 	},
 
 	/**
 	 * 获取约跑步列表
 	 */
 	SportsList() {
-		return fetch('/api/sportList')
+		return fetchGet('/api/sportList')
 	},
 
 	/**
 	 * 获取约出行列表
 	 */
 	TravelsList() {
-		return fetch('/api/travelList')
+		return fetchGet('/api/travelList')
 	},
 
 	/**
 	 * 获取约跑步详情
 	 */
 	SportsDetail(id) {
-		return fetch('/api/sportDetail', { sportId: id })
+		return fetchGet(`/api/sportDetail/${id}`)
 	},
 
 	/**
 	 * 获取约出行详情
 	 */
 	TravelsDetail(id) {
-		return fetch('/api/travelDetail', { travelId: id })
+		return fetchGet(`/api/travelDetail/${id}`)
 	},
 
 	/**
 	 * 获取出行活动点击次数
 	 */
 	travelClicks(id) {
-		return fetch('/api/travelClickNum', { travelId: id })
+		return fetchGet(`/api/travelClickNum/${id}`)
 	},
 
 	/**
 	 * 获取用户信息
 	 */
 	UserInfo(id) {
-		return fetch('/users/api/userInfo', { userId: id })
+		return fetchGet(`/api/userInfo/${id}`)
 	},
 
 	/**
 	 * 获取用户发布约行个数
 	 */
 	getPubTotravelNum(id) {
-		return fetch('/users/api/getPubTotravelNum', { userId: id })
+		return fetchGet(`/api/getPubTotravelNum/${id}`)
 	},
 
 	/**
 	 * 获取用户自己发布的约行
 	 */
 	getMyTravel(id) {
-		return fetch('/users/api/myTravel', { userId: id })
+		return fetchGet(`/api/myTravel/${id}`)
 	},
 
 	/**

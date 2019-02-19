@@ -70,9 +70,9 @@ export default {
         router
       };
       el.$store.dispatch("getDetail", params);
-      if (router == "travel") {
-        el.$store.dispatch("travelClicks", id);
-      }
+      // if (router == "travel") {
+      //   el.$store.dispatch("travelClicks", id);
+      // }
     },
     confirm() {
       this.dialog = false;
